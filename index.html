@@ -1,0 +1,1325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gown to Town 2025 - Registration</title>
+    <link rel="icon" href="images/676909ce-a0f1-4d64-ac84-01a0de6a57bb.png" type="image/png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: #1E2636;
+            color: #ffffff;
+        }
+
+        .hero-section {
+            min-height: 100vh;
+            background: linear-gradient(rgba(30, 38, 54, 0.8), rgba(30, 38, 54, 0.8)), url('images/8125f990-48be-43b5-b087-b1b171345c03.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(30, 38, 54, 0.6), rgba(30, 38, 54, 0.6));
+            backdrop-filter: blur(1px);
+            z-index: 1;
+        }
+
+        .logo {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            width: 120px;
+            height: 60px;
+            z-index: 3;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        .hero-year {
+            display: inline-block;
+            background: linear-gradient(135deg, #44AF89, #44AF89);
+            color: white;
+            padding: 0.5rem 2rem;
+            border-radius: 25px;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 25px rgba(68, 175, 137, 0.3);
+        }
+
+        .hero-subtitle {
+            background: rgba(30, 38, 54, 0.9);
+            padding: 1.2rem 2rem;
+            border-radius: 15px;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            backdrop-filter: blur(10px);
+            font-weight: 400;
+            border: 1px solid rgba(68, 175, 137, 0.2);
+        }
+
+        .audience-tags {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(68, 175, 137, 0.15);
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(68, 175, 137, 0.3);
+            transition: all 0.3s ease;
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+
+        .tag:hover {
+            background: rgba(68, 175, 137, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(68, 175, 137, 0.2);
+        }
+
+        .event-details {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .detail-item {
+            text-align: center;
+            background: rgba(30, 38, 54, 0.9);
+            padding: 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            min-width: 200px;
+            border: 1px solid rgba(68, 175, 137, 0.2);
+            transition: all 0.6s ease;
+            opacity: 0;
+            transform: translateX(100px);
+            animation: slideInRight 1s ease-out forwards;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .detail-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(68, 175, 137, 0.2);
+            border-color: rgba(68, 175, 137, 0.4);
+        }
+
+        .detail-item:nth-child(1) { animation-delay: 0.2s; }
+        .detail-item:nth-child(2) { animation-delay: 0.4s; }
+        .detail-item:nth-child(3) { animation-delay: 0.6s; }
+
+        @keyframes slideInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .detail-icon {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+            background: linear-gradient(135deg, #44AF89, #44AF89);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.8rem;
+            color: white;
+            box-shadow: 0 4px 15px rgba(68, 175, 137, 0.3);
+        }
+
+        .detail-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .detail-text {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .limited-seats {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            background: rgba(68, 175, 137, 0.15);
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(68, 175, 137, 0.3);
+        }
+
+        .register-btn {
+            background: linear-gradient(135deg, #44AF89, #44AF89);
+            color: white;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(68, 175, 137, 0.3);
+        }
+
+        .register-btn:hover {
+            background: linear-gradient(135deg, #F9AB3C, #F9AB3C);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(249, 171, 60, 0.4);
+        }
+
+        .participation-note {
+            margin-top: 1.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .content-section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+            border-radius: 20px;
+            background: rgba(30, 38, 54, 0.95);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(68, 175, 137, 0.1);
+            transition: all 0.3s ease;
+            transform: perspective(1000px) rotateX(2deg);
+        }
+
+        .content-section:hover {
+            transform: perspective(1000px) rotateX(0deg) translateY(-10px);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+            border-color: rgba(68, 175, 137, 0.2);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #44AF89;
+            font-weight: 700;
+            text-shadow: 0 4px 15px rgba(68, 175, 137, 0.3);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #bdc3c7;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            border-radius: 15px;
+            background: rgba(30, 38, 54, 0.8);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(68, 175, 137, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transform: perspective(1000px) rotateY(2deg);
+        }
+
+        .feature-card:hover {
+            transform: perspective(1000px) rotateY(0deg) translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            border-color: rgba(68, 175, 137, 0.3);
+        }
+
+        .feature-icon {
+            background: linear-gradient(135deg, #44AF89, #44AF89);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+            color: white;
+            box-shadow: 0 8px 25px rgba(68, 175, 137, 0.3);
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .feature-description {
+            color: #bdc3c7;
+            line-height: 1.6;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .countdown-section {
+            background: linear-gradient(135deg, #44AF89, #44AF89);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 20px;
+            margin: 2rem auto;
+            max-width: 1200px;
+            box-shadow: 0 20px 60px rgba(68, 175, 137, 0.4);
+            transform: perspective(1000px) rotateX(-2deg);
+            transition: all 0.3s ease;
+        }
+
+        .countdown-section:hover {
+            transform: perspective(1000px) rotateX(0deg) translateY(-5px);
+            box-shadow: 0 25px 70px rgba(68, 175, 137, 0.5);
+        }
+
+        .countdown-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            font-weight: 700;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .countdown-timer {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.95);
+            color: #1E2636;
+            padding: 2rem 1.5rem;
+            border-radius: 15px;
+            min-width: 120px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transform: perspective(500px) rotateY(5deg);
+        }
+
+        .countdown-item:hover {
+            transform: perspective(500px) rotateY(0deg) translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .countdown-number {
+            font-size: 3rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #44AF89;
+        }
+
+        .countdown-label {
+            font-size: 1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .expectations-section {
+            background: linear-gradient(135deg, rgba(30, 38, 54, 0.95), rgba(30, 38, 54, 0.9));
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            margin: 2rem auto;
+            max-width: 1200px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(68, 175, 137, 0.1);
+            transform: perspective(1000px) rotateX(2deg);
+            transition: all 0.3s ease;
+        }
+
+        .expectations-section:hover {
+            transform: perspective(1000px) rotateX(0deg) translateY(-5px);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+            border-color: rgba(68, 175, 137, 0.2);
+        }
+
+        .expectations-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .expectation-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            padding: 1.5rem;
+            background: rgba(30, 38, 54, 0.8);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(68, 175, 137, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transform: perspective(800px) rotateY(3deg);
+        }
+
+        .expectation-item:hover {
+            transform: perspective(800px) rotateY(0deg) translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(68, 175, 137, 0.3);
+        }
+
+        .expectation-icon {
+            background: linear-gradient(135deg, #44AF89, #44AF89);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: white;
+            flex-shrink: 0;
+            box-shadow: 0 8px 25px rgba(68, 175, 137, 0.3);
+        }
+
+        .expectation-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .expectation-content p {
+            color: #bdc3c7;
+            line-height: 1.6;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, rgba(68, 175, 137, 0.15), rgba(68, 175, 137, 0.08));
+            padding: 3rem 2rem;
+            text-align: center;
+            border-radius: 20px;
+            margin: 3rem auto;
+            max-width: 900px;
+            border: 1px solid rgba(68, 175, 137, 0.2);
+            box-shadow: 0 15px 45px rgba(68, 175, 137, 0.15);
+            transition: all 0.3s ease;
+            transform: perspective(1000px) rotateX(-1deg);
+        }
+
+        .cta-section:hover {
+            transform: perspective(1000px) rotateX(0deg) translateY(-3px);
+            box-shadow: 0 20px 55px rgba(68, 175, 137, 0.2);
+            border-color: rgba(68, 175, 137, 0.3);
+        }
+
+        .cta-text {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .cta-subtext {
+            font-size: 1.1rem;
+            color: #bdc3c7;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .cta-link {
+            color: #44AF89;
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .cta-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(135deg, #F9AB3C, #F9AB3C);
+            transition: width 0.3s ease;
+        }
+
+        .cta-link:hover::after {
+            width: 100%;
+        }
+
+        .cta-link:hover {
+            color: #F9AB3C;
+        }
+
+        .sponsors-section {
+            text-align: center;
+            background: linear-gradient(135deg, rgba(30, 38, 54, 0.95), rgba(30, 38, 54, 0.9));
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            margin: 2rem auto;
+            max-width: 1200px;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(68, 175, 137, 0.2);
+            position: relative;
+            overflow: hidden;
+            transform: perspective(1000px) rotateX(-2deg);
+            transition: all 0.3s ease;
+        }
+
+        .sponsors-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(68, 175, 137, 0.08), transparent);
+            pointer-events: none;
+        }
+
+        .sponsors-section:hover {
+            transform: perspective(1000px) rotateX(0deg) translateY(-10px);
+            box-shadow: 0 35px 90px rgba(0, 0, 0, 0.5);
+            border-color: rgba(68, 175, 137, 0.4);
+        }
+
+        .sponsors-title {
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            font-weight: 700;
+            color: #44AF89;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 4px 15px rgba(68, 175, 137, 0.3);
+        }
+
+        .sponsors-logos {
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .sponsor-logo {
+            padding: 2rem;
+            min-width: 200px;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.6s ease;
+            opacity: 0;
+            transform: translateY(30px);
+            background: rgba(30, 38, 54, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(68, 175, 137, 0.2);
+            backdrop-filter: blur(15px);
+        }
+
+        .sponsor-logo:first-child {
+            min-width: 140px;
+            height: 100px;
+        }
+
+        .sponsor-logo:nth-child(3) {
+            background: #000000;
+        }
+
+        .sponsor-logo:nth-child(4) {
+            background: #000000;
+        }
+
+        .sponsor-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.2));
+        }
+
+        .sponsor-logo:nth-child(1) { animation: slideUp 0.8s ease-out 0.3s forwards; }
+        .sponsor-logo:nth-child(2) { animation: slideUp 0.8s ease-out 0.6s forwards; }
+        .sponsor-logo:nth-child(3) { animation: slideUp 0.8s ease-out 0.9s forwards; }
+        .sponsor-logo:nth-child(4) { animation: slideUp 0.8s ease-out 1.2s forwards; }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .sponsor-logo:hover {
+            transform: translateY(-15px) scale(1.08);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+            border-color: rgba(68, 175, 137, 0.5);
+        }
+
+        .about-section {
+            background: linear-gradient(135deg, rgba(30, 38, 54, 0.95), rgba(30, 38, 54, 0.9));
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            margin: 2rem auto;
+            max-width: 1200px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transform: perspective(1000px) rotateX(2deg);
+            transition: all 0.3s ease;
+        }
+
+        .about-section:hover {
+            transform: perspective(1000px) rotateX(0deg) translateY(-5px);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+        }
+
+        .about-card {
+            background: rgba(30, 38, 54, 0.8);
+            padding: 3rem;
+            border-radius: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(68, 175, 137, 0.2);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            border-color: rgba(68, 175, 137, 0.3);
+        }
+
+        .about-title {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: #44AF89;
+            font-weight: 700;
+            text-shadow: 0 4px 15px rgba(68, 175, 137, 0.3);
+        }
+
+        .about-text {
+            color: #bdc3c7;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            font-weight: 400;
+        }
+
+        .about-link {
+            color: #44AF89;
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .about-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(135deg, #F9AB3C, #F9AB3C);
+            transition: width 0.3s ease;
+        }
+
+        .about-link:hover::after {
+            width: 100%;
+        }
+
+        .about-link:hover {
+            color: #F9AB3C;
+        }
+
+        .final-cta {
+            background: linear-gradient(135deg, rgba(68, 175, 137, 0.15), rgba(68, 175, 137, 0.08));
+            padding: 3rem 2rem;
+            text-align: center;
+            border-radius: 20px;
+            margin: 3rem auto;
+            max-width: 900px;
+            border: 1px solid rgba(68, 175, 137, 0.2);
+            box-shadow: 0 15px 45px rgba(68, 175, 137, 0.15);
+            transition: all 0.3s ease;
+            transform: perspective(1000px) rotateX(-1deg);
+        }
+
+        .final-cta:hover {
+            transform: perspective(1000px) rotateX(0deg) translateY(-3px);
+            box-shadow: 0 20px 55px rgba(68, 175, 137, 0.2);
+        }
+
+        .final-cta h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .final-cta .register-btn {
+            margin-top: 1rem;
+        }
+
+        .faq-section {
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(30, 38, 54, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(68, 175, 137, 0.1);
+            transform: perspective(1000px) rotateX(2deg);
+            transition: all 0.3s ease;
+        }
+
+        .faq-section:hover {
+            transform: perspective(1000px) rotateX(0deg) translateY(-5px);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+        }
+
+        .faq-item {
+            background: rgba(30, 38, 54, 0.8);
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(68, 175, 137, 0.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+            border-color: rgba(68, 175, 137, 0.2);
+        }
+
+        .faq-question {
+            background: none;
+            border: none;
+            padding: 1.5rem;
+            width: 100%;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: #44AF89;
+            background: rgba(68, 175, 137, 0.05);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            color: #bdc3c7;
+            line-height: 1.6;
+            display: none;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+            background: linear-gradient(135deg, #44AF89, #44AF89);
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(68, 175, 137, 0.3);
+        }
+
+        .faq-icon.rotated {
+            transform: rotate(180deg);
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #44AF89, #44AF89);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 2rem;
+            font-size: 1rem;
+            font-weight: 400;
+            box-shadow: 0 -10px 30px rgba(68, 175, 137, 0.2);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #44AF89, #44AF89);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 8px 25px rgba(68, 175, 137, 0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: linear-gradient(135deg, #F9AB3C, #F9AB3C);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(249, 171, 60, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .logo {
+                top: 0.5rem;
+                left: 0.5rem;
+                width: 80px;
+                height: 40px;
+            }
+            
+            .event-details {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .countdown-timer {
+                gap: 0.8rem;
+            }
+            
+            .countdown-item {
+                padding: 1rem 0.8rem;
+                min-width: 70px;
+            }
+            
+            .countdown-number {
+                font-size: 1.5rem;
+            }
+            
+            .expectations-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .expectation-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .sponsors-logos {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .sponsor-logo {
+                min-width: 150px;
+                height: 100px;
+            }
+
+            .content-section {
+                margin: 1rem;
+                padding: 3rem 1.5rem;
+            }
+
+            .countdown-section {
+                padding: 3rem 1.5rem;
+            }
+
+            .countdown-title {
+                font-size: 2rem;
+            }
+
+            .back-to-top {
+                width: 45px;
+                height: 45px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+        ↑
+    </button>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="logo">
+            <img src="images/8d29db6b-16f1-481c-a39d-9f290dd276fe.png" alt="Edike Foundation Logo">
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">GOWN TO TOWN</h1>
+            <div class="hero-year">2025</div>
+            <div class="hero-subtitle">
+                A Free Workplace Readiness Program for the Future of Banking & Finance
+            </div>
+            
+            <div class="audience-tags">
+                <div class="tag">Undergraduates</div>
+                <div class="tag">Recent Graduates</div>
+                <div class="tag">NYSC Members</div>
+            </div>
+            
+            <div class="event-details">
+                <div class="detail-item">
+                    <div class="detail-icon">📅</div>
+                    <div class="detail-title">Saturday</div>
+                    <div class="detail-text">August 30th, 2025</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">🕒</div>
+                    <div class="detail-title">10:00 AM - 3:00 PM</div>
+                    <div class="detail-text">One Day Event</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">📍</div>
+                    <div class="detail-title">Julius Berger Auditorium</div>
+                    <div class="detail-text">University of Lagos, Akoka</div>
+                </div>
+            </div>
+            
+            <div class="limited-seats">
+                👥 Limited Seats Available
+            </div>
+            
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZMMkhCt2XylZtx0SSYArY-oNKoqz08JX3ays0ZtuydB6DQw/viewform?usp=header" class="register-btn" target="_blank">🎓 Register Now - It's Free!</a>
+            
+            <div class="participation-note">
+                Participation is free, but registration is compulsory.
+            </div>
+        </div>
+    </section>
+
+    <!-- Bridge the Gap Section -->
+    <section class="content-section">
+        <h2 class="section-title">Bridge the Gap Between Classroom and Boardroom</h2>
+        <p class="section-subtitle">
+            Get practical insights into the workplace, direct access to senior professionals, and tools 
+            to help you confidently transition from academic knowledge to real-world expectations.
+        </p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3 class="feature-title">Career Strategy</h3>
+                <p class="feature-description">
+                    Practical tools for resume building, interview prep, and industry alignment
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3 class="feature-title">Industry Leaders</h3>
+                <p class="feature-description">
+                    Real conversations with professionals shaping the banking and finance sector
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎁</div>
+                <h3 class="feature-title">Freebies & More</h3>
+                <p class="feature-description">
+                    Refreshments, photo zones, games, and content-worthy experiences
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section">
+        <h2 class="countdown-title">Countdown To Gown-To-Town</h2>
+        <div class="countdown-timer" id="countdown">
+            <div class="countdown-item">
+                <span class="countdown-number" id="days">50</span>
+                <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="hours">18</span>
+                <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="minutes">28</span>
+                <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="seconds">56</span>
+                <span class="countdown-label">Seconds</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- What To Expect Section -->
+    <section class="content-section expectations-section">
+        <h2 class="section-title">What To Expect</h2>
+        <p class="section-subtitle">
+            Gain exclusive access to industry-leading speakers and hands-on career development. You'll hear 
+            directly from top executives in human resources, fintech, corporate banking, operations, and more.
+        </p>
+        
+        <div class="expectations-grid">
+            <div class="expectation-item">
+                <div class="expectation-icon">📚</div>
+                <div class="expectation-content">
+                    <h3>Career Strategy Workshops</h3>
+                    <p>Practical tools for resume building, interview prep, and industry alignment</p>
+                </div>
+            </div>
+            <div class="expectation-item">
+                <div class="expectation-icon">🌐</div>
+                <div class="expectation-content">
+                    <h3>Networking with Banking Leaders</h3>
+                    <p>Real conversations with professionals shaping the sector</p>
+                </div>
+            </div>
+            <div class="expectation-item">
+                <div class="expectation-icon">☕</div>
+                <div class="expectation-content">
+                    <h3>Freebies & Takeaways</h3>
+                    <p>Participation certificates, branded merchandise, and refreshments</p>
+                </div>
+            </div>
+            <div class="expectation-item">
+                <div class="expectation-icon">📸</div>
+                <div class="expectation-content">
+                    <h3>Engaging Social Moments</h3>
+                    <p>Photo zones, games, and content-worthy experiences</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <div class="cta-text">🎓 Be part of a new generation shaping the future of finance</div>
+            <div class="cta-subtext">📋 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZMMkhCt2XylZtx0SSYArY-oNKoqz08JX3ays0ZtuydB6DQw/viewform?usp=header" class="cta-link" target="_blank">Fill the registration form now</a> and take the first step toward your professional journey</div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section class="sponsors-section">
+        <h2 class="sponsors-title">Supported By</h2>
+        <div class="sponsors-logos">
+            <div class="sponsor-logo">
+                <img src="images/ecaaa00d-19a3-44be-8358-618821e43725.png" alt="Edike">
+            </div>
+            <div class="sponsor-logo">
+                <img src="images/47ba1a49-c7e7-44aa-806b-287f4605c886.png" alt="Strictly Seasons">
+            </div>
+            <div class="sponsor-logo">
+                <img src="images/676909ce-a0f1-4d64-ac84-01a0de6a57bb.png" alt="Third Logo">
+            </div>
+            <div class="sponsor-logo">
+                <img src="images/52539ddc-7d89-49f2-9b5f-5f22d20118bc.png" alt="New Logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Edike Foundation -->
+    <section class="about-section">
+        <div class="about-card">
+            <h2 class="about-title">About Edike Foundation</h2>
+            <p class="about-text">
+                Edike Foundation, established in 2023, is a non-profit organisation committed to empowering disadvantaged youth in 
+                Nigeria through education. We provide scholarships and comprehensive support services to students who have lost 
+                a parent due to medical-related conditions or terminal illnesses, enabling them to complete their education and 
+                achieve their full potential.
+            </p>
+            <p class="about-text">
+                Our mission is rooted in the belief that education is the cornerstone of individual and societal progress. By investing 
+                in these young minds, we not only transform lives but also contribute to a more equitable and prosperous Nigeria.
+            </p>
+            <p class="about-text">
+                Learn more at: <a href="https://www.edikefoundation.com" class="about-link" target="_blank">www.edikefoundation.com</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="content-section">
+        <div class="final-cta">
+            <h2>From classroom to boardroom — your journey starts here.</h2>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZMMkhCt2XylZtx0SSYArY-oNKoqz08JX3ays0ZtuydB6DQw/viewform?usp=header" class="register-btn" target="_blank">Register for Gown to Town 2025 Now</a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+                Who can attend?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                ● Undergraduates in any Nigerian university<br>
+                ● NYSC corps members<br>
+                ● Recent graduates (0–2 years post-NYSC)
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+                Is there a dress code?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                ● Yes, smart casual or corporate preferred — be camera ready!
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+                How much does it cost to attend?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                ● Attendance is completely free, but registration is required.
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+                Will food and refreshments be provided?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                ● Yes, breakfast is available for early arrivals, while lunch will be available to all participants.
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+                Will there be opportunities to network one-on-one with the speakers?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                ● Yes. Designated networking sessions and lounges will allow for informal interactions.
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+                How will I get updates after registration?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                ● Once registered, you will receive updates via email and WhatsApp as the event approaches.
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Edike Foundation. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // FAQ Toggle Function
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('.faq-icon');
+            
+            // Close all other FAQs
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                if (item !== answer) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            document.querySelectorAll('.faq-icon').forEach(item => {
+                if (item !== icon) {
+                    item.classList.remove('rotated');
+                    item.textContent = '+';
+                }
+            });
+            
+            // Toggle current FAQ
+            answer.classList.toggle('active');
+            icon.classList.toggle('rotated');
+            icon.textContent = answer.classList.contains('active') ? '−' : '+';
+        }
+
+        // Countdown Timer
+        function updateCountdown() {
+            const eventDate = new Date('August 30, 2025 10:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+
+            if (distance < 0) {
+                document.getElementById('countdown').innerHTML = '<h2>Event Started!</h2>';
+            }
+        }
+
+        // Back to Top functionality
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Show/hide back to top button
+        function handleScroll() {
+            const backToTopButton = document.getElementById('backToTop');
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        }
+
+        // Event listeners
+        window.addEventListener('scroll', handleScroll);
+
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+
+        // Smooth scrolling
+        document.documentElement.style.scrollBehavior = 'smooth';
+
+        // Animation observer for sponsors
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const logos = entry.target.querySelectorAll('.sponsor-logo');
+                    logos.forEach((logo, index) => {
+                        setTimeout(() => {
+                            logo.style.animation = `slideUp 0.8s ease-out forwards`;
+                        }, index * 300);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe sponsors section when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const sponsorsSection = document.querySelector('.sponsors-logos');
+            if (sponsorsSection) {
+                observer.observe(sponsorsSection);
+            }
+        });
+    </script>
+</body>
+</html>
